@@ -61,11 +61,13 @@ main{
 }
 
 .productminimalize{
+    text-wrap: nowrap;
     width: 20%;
 }
 
 
 .producthover{
+    text-wrap: nowrap;
     width: 90%;
 }
 
@@ -73,7 +75,7 @@ main{
 
 .product h2{
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     text-wrap: nowrap;
     margin-bottom: 20px;
 }
@@ -100,6 +102,13 @@ main{
     background-color: #2b2b2bcc;
 }
 
+@media screen and (max-width:1024px){
+    .product h2{
+        font-size: 3rem;
+        text-wrap: wrap;
+        text-align: center;
+    }
+}
 @media screen and (max-width:750px){
     main{
         flex-direction: column;
@@ -111,7 +120,9 @@ main{
         width: 100% !important;
         height: 50% !important;
     }
-
+    .product h2{
+        font-size: 3rem;
+    }
     .productminimalize{
         height: 20% !important;
     }
