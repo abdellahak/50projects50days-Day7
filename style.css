@@ -123,6 +123,9 @@ main{
     .product h2{
         font-size: 3rem;
     }
+    .product a{
+        margin-bottom: 0px;
+    }
     .productminimalize{
         height: 20% !important;
     }
