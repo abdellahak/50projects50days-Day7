@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.product{
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: width 1s ease;
+}
+
+.product *{
+    z-index: 2;
+}
+
+.product1{
+    background-image: url("imgs/GalaxyS24Ultra.jpg");
+}
+
+.product1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #5754ecb3;
+    z-index: 0;
+    opacity: 0.5;
+}
+.product2{
+    background-image: url("imgs/iphone15ProMax.jpg");
+}
+
+.product2::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #2b2b2bcc;
+    opacity: 0.9;
+}
+
+.productminimalize{
+    width: 20%;
+}
+
+
+.producthover{
+    width: 90%;
+}
+
+
+
+.product h2{
+    color: white;
+    font-size: 4rem;
+    text-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.product a{
+    display: block;
+    padding: 15px 60px;
+    border: 4px solid white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    text-wrap: nowrap;
+    margin-bottom: 150px;
+}
+
+.product1 a:hover{
+    border-color: #5754ecb3;
+    background-color: #5754ecb3;
+}
+
+.product2 a:hover{
+    border-color: #2b2b2bcc;
+    background-color: #2b2b2bcc;
+}
+
+@media screen and (max-width:750px){
+    main{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .product{
+        transition: height 1s ease;
+        width: 100% !important;
+        height: 50% !important;
+    }
+
+    .productminimalize{
+        height: 20% !important;
+    }
+    
+    
+    .producthover{
+        height: 90% !important;
+    }
+    
+}
